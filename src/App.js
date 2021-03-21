@@ -1,12 +1,12 @@
 import './App.scss';
+import MainLayout from './layout/MainLayout';
+
 //import Commits from './components/Commits';
 
 function App() {
   return (
     <div className="App">
-      <div className="Header"></div>
-      <div className="Sidebar"></div>
-      <div className="Page"></div>
+      <MainLayout></MainLayout>
     </div>
   );
 }

@@ -1,35 +1,17 @@
 * {
-  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .App {
+  margin: 0;
   height: 100vh;
   display: grid;
-  grid-template-columns: repeat(24, [col-start] 1fr);
+  grid-template-columns: repeat(23, [col-start] 1fr);
   grid-column-gap: 10px;
   grid-template-rows: repeat(24, [row-start] 1fr);
   min-width: 992px;
+  background: #fcfcfc;
   overflow: auto;
+  font-family: 'Fira Sans Condensed';
 }
-
-.Header {
-  background: #484848;
-  grid-column: col-start / col-start 25;
-  grid-row: row-start / row-start 2;
-  min-height: 60px;
-}
-
-.Sidebar {
-  background: #eee;
-  grid-column: col-start / col-start 6;
-  grid-row: row-start 2 / row-start 25;
-}
-
-.Page {
-  border: 2px solid lightgray;
-  grid-column: col-start 7 / col-start 24;
-  grid-row: row-start 3 / row-start 24;
-}
-
-/* Next, set maximum parameters of layout elements using minmax not min max height width */
-/* Build sub-grid for page component and practise layouts */
