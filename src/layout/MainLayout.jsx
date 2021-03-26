@@ -1,14 +1,14 @@
 import React from 'react';
-import Header from '../components/header/Header';
-import Sidebar from '../components/sidebar/Sidebar';
-import Page from '../components/page/Page';
+import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
+import Page from '../components/Page';
 
 function MainLayout() {
   return (
     <React.Fragment>
       <Header />
       <Sidebar />
-      <Page></Page>
+      <Page />
     </React.Fragment>
   );
 }
