@@ -1,6 +1,5 @@
 import React from 'react';
 import Menu from './Menu';
-import Footer from './Footer';
 import styled from 'styled-components';
 import Buffer from './styled/Buffer';
 const Wrapper = styled.div`
@@ -25,7 +24,6 @@ function Sidebar() {
         <Buffer />
         <Menu />
       </div>
-      <Footer />
     </Wrapper>
   );
 }
