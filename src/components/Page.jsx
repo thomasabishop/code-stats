@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import Buffer from './styled/Buffer';
 
 const Wrapper = styled.div`
-  //border: 1px solid black;
+  border: 1px solid black;
   grid-column: 7 / 24;
   grid-row: 2 / 23;
   display: flex;
@@ -11,21 +12,16 @@ const Wrapper = styled.div`
 `;
 
 const PageContent = styled.div`
-  //border: 1px solid lightgreen;
+  border: 1px solid lightgreen;
   padding: 1rem;
   height: 100%;
 `;
 
-const Buffer = styled.div`
-  padding: 1rem;
-  /* background: #e8e8e8; */
-`;
-
-function Page() {
+function Page(props) {
   return (
     <Wrapper>
       <Buffer />
-      <PageContent />
+      <PageContent>{props.children}</PageContent>
     </Wrapper>
   );
 }

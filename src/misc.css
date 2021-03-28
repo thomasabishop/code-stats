@@ -8,9 +8,3 @@
 .header-icon {
   margin-right: 1rem !important;
 }
-
-/* Active menu link style toggle */
-.active {
-  border-left: 2px solid #3880ff;
-  background: #f1f4f8;
-}
