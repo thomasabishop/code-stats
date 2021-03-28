@@ -2,7 +2,6 @@ import { React, useContext } from 'react';
 import Context from '../context/context';
 import styled from 'styled-components';
 import Logo from '../img/portrait-logo.svg';
-//import { Button } from '@material-ui/core';
 
 const Wrapper = styled.div`
   background: ${({ theme }) => theme.mainColor};
@@ -31,7 +30,6 @@ const Button = styled.button`
   border-radius: 6px;
   padding: 0.5rem 0.8rem;
   cursor: pointer;
-  transition: 0.3s ease;
 `;
 const AppTitle = styled.h1`
   font-family: 'Fira Sans Condensed';
@@ -66,9 +64,9 @@ function Header() {
         <Button onClick={handleClick}>
           <FaIcon>
             {!state.isDark ? (
-              <i class="fas fa-sun sun-icon"></i>
-            ) : (
               <i class="fas fa-moon moon-icon"></i>
+            ) : (
+              <i class="fas fa-sun sun-icon"></i>
             )}
           </FaIcon>
         </Button>

@@ -12,11 +12,6 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `;
 
-// const Buffer = styled.div`
-//   padding: 1rem;
-//   /* background: #e8e8e8; */
-// `;
-
 function Sidebar() {
   return (
     <Wrapper>
