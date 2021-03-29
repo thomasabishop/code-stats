@@ -33,7 +33,7 @@ function Menu() {
   return (
     <Wrapper className="router-link-override">
       <MenuLink exact={true} to="/">
-        Dash
+        Dashboard
       </MenuLink>
 
       <MenuLink to="/about">About</MenuLink>

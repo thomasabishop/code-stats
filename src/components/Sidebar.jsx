@@ -1,8 +1,8 @@
 import React from 'react';
 import Menu from './Menu';
 import styled from 'styled-components';
-import Buffer from './styled/Buffer';
 const Wrapper = styled.div`
+  padding-top: 1rem;
   background: ${({ theme }) => theme.mainColor};
   grid-column: 1 /6;
   grid-row: 2 / 25;
@@ -16,7 +16,6 @@ function Sidebar() {
   return (
     <Wrapper>
       <div>
-        <Buffer />
         <Menu />
       </div>
     </Wrapper>
