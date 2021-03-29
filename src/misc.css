@@ -8,3 +8,16 @@
 .header-icon {
   margin-right: 1rem !important;
 }
+
+a.about-links {
+  color: #3880ff;
+  text-decoration: none;
+}
+
+a.about-links:hover {
+  color: rgb(235, 68, 90);
+}
+
+p {
+  line-height: 1.5;
+}
