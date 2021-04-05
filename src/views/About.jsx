@@ -37,9 +37,13 @@ function About() {
       </p>
 
       <p>
+        {' '}
+        Created by
         <a className="about-links" href="https://thomas-bishop.co.uk/">
+          {' '}
           Thomas Bishop
         </a>
+        .
       </p>
     </React.Fragment>
   );
