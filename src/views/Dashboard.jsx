@@ -4,11 +4,11 @@ import Scorecard from '../components/Scorecard';
 const Wrapper = styled.div`
   padding-top: 1rem;
   margin: 0;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 5px;
-
-  grid-row-gap: 5px;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
   grid-template-rows: repeat(12, 1fr);
 `;
 
@@ -17,8 +17,26 @@ const Scorecards = styled.div`
   flex-direction: row;
   justify-content: space-between;
   grid-column: 1/13;
-  grid-row: 1/4;
+  grid-row: 1/2;
   //border: 1px solid blue;
+`;
+
+const ChartBlockOne = styled.div`
+  border: 1px solid blue;
+  grid-column: 1/13;
+  grid-row: 2/6;
+`;
+
+const ChartBlockTwo = styled.div`
+  border: 1px solid magenta;
+  grid-column: 1/7;
+  grid-row: 6/10;
+`;
+
+const ChartBlockThree = styled.div`
+  border: 1px solid lightgreen;
+  grid-column: 7/13;
+  grid-row: 6/10;
 `;
 
 function Dashboard() {
@@ -30,6 +48,11 @@ function Dashboard() {
         <Scorecard value="3" label="Languages" />
         <Scorecard value="5" label="Projects" />
       </Scorecards>
+      <ChartBlockOne />
+
+      <ChartBlockTwo />
+
+      <ChartBlockThree />
     </Wrapper>
   );
 }
