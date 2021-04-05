@@ -2,7 +2,7 @@ import { React, useContext } from 'react';
 import Context from '../context/context';
 import styled from 'styled-components';
 import Logo from '../img/portrait-logo.svg';
-
+import DateSelector from '../components/DateSelector';
 const Wrapper = styled.div`
   background: ${({ theme }) => theme.mainColor};
   border-bottom: 1px solid ${({ theme }) => theme.borders};
@@ -57,19 +57,22 @@ function Header() {
         />
         <AppTitle>CodeStats</AppTitle>
       </Branding>
-      <div className="icons">
-        <FaIcon className="header-icon">
-          <i class="fab fa-github-alt"></i>
-        </FaIcon>
-        <Button onClick={handleClick}>
-          <FaIcon>
-            {!state.isDark ? (
-              <i class="fas fa-moon moon-icon"></i>
-            ) : (
-              <i class="fas fa-sun sun-icon"></i>
-            )}
+      <div className="right">
+        <DateSelector />
+        <div className="icons">
+          <FaIcon className="header-icon">
+            <i class="fab fa-github-alt"></i>
           </FaIcon>
-        </Button>
+          <Button onClick={handleClick}>
+            <FaIcon>
+              {!state.isDark ? (
+                <i class="fas fa-moon moon-icon"></i>
+              ) : (
+                <i class="fas fa-sun sun-icon"></i>
+              )}
+            </FaIcon>
+          </Button>
+        </div>
       </div>
     </Wrapper>
   );

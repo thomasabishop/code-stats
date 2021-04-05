@@ -11,6 +11,8 @@ import Sidebar from './components/Sidebar';
 import Page from './components/Page';
 import Dashboard from './views/Dashboard';
 import About from './views/About';
+import { StylesProvider } from '@material-ui/core/styles/';
+
 function App() {
   const [state, dispatch] = useReducer(reducer, {
     isDark: false,
@@ -19,17 +21,19 @@ function App() {
     <Context.Provider value={{ state, dispatch }}>
       <ThemeProvider theme={state.isDark ? darkTheme : lightTheme}>
         <React.Fragment>
-          <GlobalStyles />
-          <Router>
-            <Header />
-            <Sidebar />
-            <Page>
-              <Switch>
-                <Route exact path="/" component={Dashboard} />
-                <Route path="/about" component={About} />
-              </Switch>
-            </Page>
-          </Router>
+          <StylesProvider injectFirst>
+            <GlobalStyles />
+            <Router>
+              <Header />
+              <Sidebar />
+              <Page>
+                <Switch>
+                  <Route exact path="/" component={Dashboard} />
+                  <Route path="/about" component={About} />
+                </Switch>
+              </Page>
+            </Router>
+          </StylesProvider>
         </React.Fragment>
       </ThemeProvider>
     </Context.Provider>

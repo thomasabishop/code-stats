@@ -21,3 +21,18 @@ a.about-links:hover {
 p {
   line-height: 1.5;
 }
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.MuiSelect-root {
+  background: transparent !important;
+}
+
+.MuiMenuItem-root.Mui-selected {
+  background: transparent !important;
+  color: #3880ff;
+}

@@ -20,6 +20,7 @@ const MenuLink = styled(NavLink)`
   text-transform: uppercase;
   letter-spacing: 0.08rem;
   text-decoration: none;
+  border-radius: 0 6px 6px 0;
   :hover {
     background: ${({ theme }) => theme.contrastBlockColor};
   }

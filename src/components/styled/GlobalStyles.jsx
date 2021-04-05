@@ -4,7 +4,6 @@ const GlobalStyles = createGlobalStyle`
 #root {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  //width: 100vw;
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(24, 1fr);
@@ -13,8 +12,13 @@ const GlobalStyles = createGlobalStyle`
   min-width: 992px;
   background: ${({ theme }) => theme.contrastBlockColor};
   overflow: hidden;
-  font-family: 'OpenSans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: ${({ theme }) => theme.fontColor};
+  font-size: 14px;
+}
+
+ul {
+  background: ${({ theme }) => theme.mainColor};
 }
 
 `;
