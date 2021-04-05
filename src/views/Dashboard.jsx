@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Scorecard from '../components/Scorecard';
+import HoursCommitsDualChart from '../graphs/HoursCommitsDualChart';
 const Wrapper = styled.div`
   padding-top: 1rem;
   margin: 0;
@@ -48,8 +49,9 @@ function Dashboard() {
         <Scorecard value="3" label="Languages" />
         <Scorecard value="5" label="Projects" />
       </Scorecards>
-      <ChartBlockOne />
-
+      <ChartBlockOne>
+        <HoursCommitsDualChart />
+      </ChartBlockOne>
       <ChartBlockTwo />
 
       <ChartBlockThree />
