@@ -17,6 +17,10 @@ const GlobalStyles = createGlobalStyle`
   font-size: 14px;
 }
 
+p {
+  line-height: 1.5;
+}
+
 ul {
   background: ${({ theme }) => theme.mainColor};
 }

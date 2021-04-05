@@ -1,3 +1,10 @@
+/* Header  */
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .sun-icon {
   color: orange;
 }
@@ -9,6 +16,7 @@
   margin-right: 1rem !important;
 }
 
+/* Side menu */
 a.about-links {
   color: #3880ff;
   text-decoration: none;
@@ -18,16 +26,7 @@ a.about-links:hover {
   color: rgb(235, 68, 90);
 }
 
-p {
-  line-height: 1.5;
-}
-
-.right {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
+/* Material-UI component overrides */
 .MuiSelect-root {
   background: transparent !important;
 }
@@ -35,4 +34,11 @@ p {
 .MuiMenuItem-root.Mui-selected {
   background: transparent !important;
   color: #3880ff;
+}
+
+/* Remove Highcharts branding watermark from charts */
+highcharts-button,
+highcharts-legend,
+.highcharts-container > svg > text.highcharts-credits {
+  display: none;
 }
