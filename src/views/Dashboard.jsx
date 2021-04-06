@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Scorecard from '../components/Scorecard';
 import HoursCommitsDualChart from '../graphs/HoursCommitsDualChart';
+import LanguagesPie from '../graphs/LanguagesPie';
+
 const Wrapper = styled.div`
   padding-top: 1rem;
   margin: 0;
@@ -25,19 +27,19 @@ const Scorecards = styled.div`
 const ChartBlockOne = styled.div`
   //border: 1px solid blue;
   grid-column: 1/13;
-  grid-row: 2/6;
+  grid-row: 2/7;
 `;
 
 const ChartBlockTwo = styled.div`
-  border: 1px solid magenta;
+  //border: 1px solid magenta;
   grid-column: 1/7;
-  grid-row: 6/10;
+  grid-row: 7/11;
 `;
 
 const ChartBlockThree = styled.div`
   border: 1px solid lightgreen;
   grid-column: 7/13;
-  grid-row: 6/10;
+  grid-row: 7/11;
 `;
 
 function Dashboard() {
@@ -52,8 +54,9 @@ function Dashboard() {
       <ChartBlockOne>
         <HoursCommitsDualChart />
       </ChartBlockOne>
-      <ChartBlockTwo />
-
+      <ChartBlockTwo>
+        <LanguagesPie />
+      </ChartBlockTwo>
       <ChartBlockThree />
     </Wrapper>
   );

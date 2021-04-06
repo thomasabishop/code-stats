@@ -77,6 +77,7 @@ const options = {
       name: 'Commits',
       type: 'spline',
       data: commitsBarClosure,
+      color: Highcharts.getOptions().colors[2],
     },
   ],
 };
