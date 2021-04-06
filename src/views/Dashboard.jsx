@@ -23,7 +23,7 @@ const Scorecards = styled.div`
 `;
 
 const ChartBlockOne = styled.div`
-  border: 1px solid blue;
+  //border: 1px solid blue;
   grid-column: 1/13;
   grid-row: 2/6;
 `;
