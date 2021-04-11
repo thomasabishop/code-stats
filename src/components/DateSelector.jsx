@@ -1,6 +1,7 @@
+import { useContext } from 'react';
 import styled from 'styled-components';
 import { Select, MenuItem } from '@material-ui/core';
-
+import { GraphStore } from '../context/graphContext';
 const CustomSelect = styled(Select)`
   width: 200px;
   margin-right: 50px;
@@ -32,12 +33,26 @@ const Option = styled(MenuItem)`
 `;
 
 function DateSelector() {
+  const [state, dispatch] = useContext(GraphStore);
+  const handleChange = (event) => {
+    dispatch({
+      type: 'SET_TIMEFRAME',
+      field: event.target.name,
+      payload: event.target.value,
+    });
+  };
+  console.log(state);
   return (
-    <CustomSelect disableUnderline={true}>
-      <Option value={1}>This week</Option>
-      <Option value={2}>This month</Option>
-      <Option value={3}>This year</Option>
-      <Option value={4}>All time</Option>
+    <CustomSelect
+      name="timeframe"
+      value={state.timeframe}
+      disableUnderline={true}
+      onChange={handleChange}
+    >
+      <Option value="week">This week</Option>
+      <Option value="month">This month</Option>
+      <Option value="year">This year</Option>
+      <Option value="all">All time</Option>
     </CustomSelect>
   );
 }

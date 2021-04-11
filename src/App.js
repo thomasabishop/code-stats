@@ -2,6 +2,7 @@ import React, { useReducer } from 'react';
 import { MemoryRouter as Router, Route, Switch } from 'react-router-dom';
 import reducer from './context/reducer';
 import Context from './context/context';
+import { GraphProvider } from './context/graphContext';
 import { ThemeProvider } from 'styled-components';
 import './misc.css';
 import { lightTheme, darkTheme } from './components/styled/Themes';
@@ -24,14 +25,16 @@ function App() {
           <StylesProvider injectFirst>
             <GlobalStyles />
             <Router>
-              <Header />
-              <Sidebar />
-              <Page>
-                <Switch>
-                  <Route exact path="/" component={Dashboard} />
-                  <Route path="/about" component={About} />
-                </Switch>
-              </Page>
+              <GraphProvider>
+                <Header />
+                <Sidebar />
+                <Page>
+                  <Switch>
+                    <Route exact path="/" component={Dashboard} />
+                    <Route path="/about" component={About} />
+                  </Switch>
+                </Page>
+              </GraphProvider>
             </Router>
           </StylesProvider>
         </React.Fragment>
