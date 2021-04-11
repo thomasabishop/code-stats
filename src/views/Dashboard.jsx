@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Scorecard from '../components/Scorecard';
 //import HoursCommitsDualChart from '../graphs/HoursCommitsDualChart';
-import LanguagesPie from '../graphs/LanguagesPie';
+import CommitsScatter from '../graphs/CommitsScatter';
+import BarLanguages from '../graphs/BarLanguages';
 import HoursAreaChart from '../graphs/HoursAreaChart';
 const Wrapper = styled.div`
   padding-top: 1rem;
@@ -10,8 +11,8 @@ const Wrapper = styled.div`
   height: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
   grid-template-rows: repeat(12, 1fr);
 `;
 
@@ -27,19 +28,20 @@ const Scorecards = styled.div`
 const ChartBlockOne = styled.div`
   //border: 1px solid blue;
   grid-column: 1/13;
-  grid-row: 2/7;
+  grid-row: 2/6;
+  height: 100%;
 `;
 
 const ChartBlockTwo = styled.div`
   //border: 1px solid magenta;
-  grid-column: 1/7;
-  grid-row: 7/11;
+  grid-column: 1/6;
+  grid-row: 6/10;
 `;
 
 const ChartBlockThree = styled.div`
-  border: 1px solid lightgreen;
-  grid-column: 7/13;
-  grid-row: 7/11;
+  //  border: 1px solid lightgreen;
+  grid-column: 6/13;
+  grid-row: 6/10;
 `;
 
 function Dashboard() {
@@ -54,10 +56,10 @@ function Dashboard() {
       <ChartBlockOne>
         <HoursAreaChart />
       </ChartBlockOne>
-      <ChartBlockTwo>
-        <LanguagesPie />
-      </ChartBlockTwo>
-      <ChartBlockThree />
+      <ChartBlockTwo></ChartBlockTwo>
+      <ChartBlockThree>
+        <CommitsScatter />
+      </ChartBlockThree>
     </Wrapper>
   );
 }

@@ -9,7 +9,7 @@ const CustomSelect = styled(Select)`
   font-family: 'Open Sans';
   text-transform: uppercase;
   letter-spacing: 0.08rem;
-  padding: 0.5rem;
+  padding: 0.3rem;
   border-radius: 6px;
   padding-left: 1rem;
   background: ${({ theme }) => theme.contrastBlockColor};

@@ -5,11 +5,11 @@ import HighchartsReact from 'highcharts-react-official';
 // Dummy data, for styling purposes
 //import { daysOfMonth } from './data';
 import { hoursBarClosure } from './data';
-//import { commitsBarClosure } from './data';
 
 const options = {
   chart: {
     type: 'area',
+    spacingTop: 30,
   },
   title: {
     text: '',
@@ -23,11 +23,14 @@ const options = {
     },
     labels: {},
   },
+  legend: {
+    enabled: false,
+  },
   tooltip: {},
   plotOptions: {
     area: {
       marker: {
-        enabled: false,
+        enabled: true,
         symbol: 'circle',
         radius: 2,
         states: {
@@ -43,6 +46,11 @@ const options = {
       name: 'Hours',
       data: hoursBarClosure,
     },
+    // {
+    //   name: 'Commits',
+    //   data: commitsBarClosure,
+    //   type: 'spline',
+    // },
   ],
 };
 

@@ -14,7 +14,7 @@ const MenuLink = styled(NavLink)`
   font-family: 'Open Sans';
   font-size: 12px;
   justify-self: center;
-  padding: 1rem;
+  padding: 0.8rem;
   color: ${({ theme }) => theme.fontColor};
   /*height: 40px;*/
   text-transform: uppercase;

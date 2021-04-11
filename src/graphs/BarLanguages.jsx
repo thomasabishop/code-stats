@@ -1,13 +1,12 @@
 import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-
+import { commitsBarClosure } from './data';
 const options = {
   chart: {
     plotBackgroundColor: null,
-    plotBorderWidth: null,
+    plotBorderWidth: 0,
     plotShadow: false,
-    type: 'pie',
   },
   title: {
     text: '',
@@ -22,51 +21,44 @@ const options = {
   },
   plotOptions: {
     pie: {
-      allowPointSelect: true,
-      cursor: 'pointer',
       dataLabels: {
         enabled: true,
+        distance: -50,
+        style: {
+          fontWeight: 'bold',
+          color: 'white',
+        },
       },
-      showInLegend: false,
+      startAngle: -90,
+      endAngle: 90,
+      center: ['50%', '75%'],
+      size: '110%',
     },
   },
   series: [
     {
-      name: 'Languages',
-      colorByPoint: true,
+      type: 'pie',
+      name: 'Browser share',
+      innerSize: '50%',
       data: [
-        {
-          name: 'React JavaScript',
-          y: 61.41,
-          sliced: true,
-          selected: true,
-        },
-        {
-          name: 'JavaScript',
-          y: 11.84,
-        },
-        {
-          name: 'TypeScript',
-          y: 10.85,
-        },
-        {
-          name: 'SCSS',
-          y: 4.67,
-        },
-        {
-          name: 'HTML',
-          y: 4.18,
-        },
+        ['Chrome', 58.9],
+        ['Firefox', 13.29],
+        ['Internet Explorer', 13],
+        ['Edge', 3.78],
+        ['Safari', 3.42],
         {
           name: 'Other',
-          y: 7.05,
+          y: 7.61,
+          dataLabels: {
+            enabled: false,
+          },
         },
       ],
     },
   ],
 };
 
-function LanguagesPie() {
+function BarLanguages() {
   return (
     <HighchartsReact
       highcharts={Highcharts}
@@ -76,4 +68,4 @@ function LanguagesPie() {
   );
 }
 
-export default LanguagesPie;
+export default BarLanguages;

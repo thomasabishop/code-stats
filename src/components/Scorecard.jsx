@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   // border: 1px solid black;
-  width: 100px;
+  width: 80px;
   //height: 80px;
   border-radius: 6px;
   background: ${({ theme }) => theme.mainColor};

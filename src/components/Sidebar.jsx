@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   padding-top: 1rem;
   background: ${({ theme }) => theme.mainColor};
-  grid-column: 1 /6;
+  grid-column: 1 / 6;
   grid-row: 2 / 25;
   display: flex;
   flex-direction: column;
