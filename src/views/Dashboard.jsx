@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Scorecard from '../components/Scorecard';
 //import HoursCommitsDualChart from '../graphs/HoursCommitsDualChart';
 import CommitsScatter from '../graphs/CommitsScatter';
-import BarLanguages from '../graphs/BarLanguages';
 import HoursAreaChart from '../graphs/HoursAreaChart';
 const Wrapper = styled.div`
   padding-top: 1rem;

@@ -1,7 +1,6 @@
 import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import { commitsBarClosure } from './data';
 const options = {
   chart: {
     plotBackgroundColor: null,
