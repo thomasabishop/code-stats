@@ -1,14 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import "./App.scss"
 
-
-function App() {
+export const App = () => {
   return (
     <div className="App">
-   <p>Test</p> 
+      <p>Test</p>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
