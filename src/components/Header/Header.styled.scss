@@ -1,0 +1,56 @@
+@import "../../scss/variables";
+.Header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  height: 50px;
+  padding: 0 2rem;
+  backdrop-filter: saturate(30%) blur(4px);
+  background: rgba(255, 255, 255, 0.7);
+  position: sticky;
+  top: 0;
+  .logo-wrapper {
+    display: inline-flex;
+    align-items: center;
+    flex: 1;
+  }
+  .logotype {
+    font-weight: 700;
+    font-size: 1rem;
+    color: $headerFontColor;
+    letter-spacing: 0.1px;
+    margin-left: 0.5rem;
+  }
+  .logo {
+    width: 28px;
+  }
+  .github-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: lighten($bodyFontColor, 20%);
+    transition: color ease-in 0.3s;
+    &:hover {
+      color: $bodyFontColor;
+    }
+  }
+  .controls-wrapper {
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      font-weight: 500;
+      cursor: pointer;
+      border: 0;
+      background: $buttonPrimaryColor;
+      border-radius: 8px;
+      padding: 0.425rem 0.8rem;
+      color: #fff;
+      &:hover {
+        background: lighten($buttonPrimaryColor, 3%);
+      }
+    }
+  }
+}
